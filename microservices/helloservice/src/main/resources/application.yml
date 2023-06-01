@@ -1,0 +1,19 @@
+spring:
+ application:
+   name: helloservice
+server:
+     port: 8094
+     #dynamic porT ALLOCATION
+     #after adding gateway no need to allocate port 
+eureka:
+  client:
+    register-with-eureka: true
+    #have to register with registry
+    fetch-registry: true
+    service-url:
+         defaultZone: http://localhost:8761/eureka
+  instance: 
+    hostname: localhost 
+    #going to run on the same server
+
+
